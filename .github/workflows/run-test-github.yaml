@@ -16,8 +16,8 @@ on:
       input-choice:
         description: 'Input choice for the action'
         required: true
-        default: 'nvidia'
         type: choice
+        default: 'nvidia'
         options:
           - nvidia
           - amd
@@ -28,11 +28,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Run Dummy Test Action
-      uses: ./test-github-actions
-      with:
-        input-string: "Test string"
-        input-choice: "nvidia"
+      - name: Run Dummy Test Action
+        uses: ./test-github-actions
+        with:
+          input-string: "Test string"
+          input-choice: "nvidia"

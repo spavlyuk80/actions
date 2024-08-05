@@ -1,0 +1,26 @@
+name: Dummy test action
+description: Dummy test action
+inputs:
+
+  input-string:
+    description: some string
+    required: true
+    type: string
+
+  input-choice:
+    description: some input choice
+    required: true
+    options:
+      - nvidia
+      - amd
+      - intel
+
+runs:
+  using: "composite"
+  steps:
+   - name: Setup
+      run: echo "Setting up the environment"
+
+   - name: Cleanup
+      run: echo "Cleaning up the environment"
+

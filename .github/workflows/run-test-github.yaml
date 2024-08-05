@@ -32,7 +32,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run Dummy Test Action
-      uses: ./
+      uses: ./test-github-actions
       with:
         input-string: "Test string"
         input-choice: "nvidia"

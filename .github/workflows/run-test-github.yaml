@@ -8,6 +8,20 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      input-string:
+        description: 'Input string for the action'
+        required: true
+        default: 'Test string'
+      input-choice:
+        description: 'Input choice for the action'
+        required: true
+        default: 'nvidia'
+        type: choice
+        options:
+          - nvidia
+          - amd
+          - intel
 
 jobs:
   run-dummy-test-action:
